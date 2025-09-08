@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <title>I'm Sahan</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">
+          <h1>Sahan Lochana</h1>
+        </div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section class="main">
+      <section class="intro">
+        <div class="intro-text">
+          <h2 class="greeting">Hi,</h2>
+          <h2>I'm <span class="my-name">Sahan Lochana</span></h2>
+          <p class="intro-content"><span class="auto-type"></span></p>
+          <div class="btns">
+            <a href="#projects" class="work-btn btn">View My Work</a>
+            <a href="#contact" class="touch-btn btn">Get in touch</a>
+          </div>
+        </div>
+        <div class="intro-image">
+          <img src="assets\green.png" alt="Profile Picture" />
+        </div>
+      </section>
+      <section id="about" class="about-me o-section">
+        <h2 class="section-title">About Me</h2>
+        <div class="title-underline"></div>
+        <p>
+          I am an enthusiastic and detail-oriented IT professional with a strong
+          passion for technology and problem-solving. With hands-on experience
+          in software development, cloud technologies, and database management,
+          I enjoy building reliable and efficient solutions that make a real
+          impact. My expertise spans across programming languages such as
+          <b>Python, Dart, Flutter, and Java</b>, along with practical knowledge
+          of <b>MongoDB</b> and <b>MySQL</b> for managing and organizing data. I
+          am also keen on exploring modern tools and frameworks to stay up to
+          date with emerging trends in the tech industry. I value continuous
+          learning, teamwork, and innovation. Whether it’s developing
+          applications, optimizing systems, or creating user-focused solutions,
+          I always strive to deliver high-quality work with professionalism and
+          creativity.
+        </p>
+        .
+      </section>
+      <section id="skills" class="skills o-section">
+        <h2 class="section-title">Skills</h2>
+        <div class="title-underline"></div>
+        <div class="skill-container">
+          <div class="skill-tile">
+            <img src="assets\java.png" alt="Profile Picture" />
+            <div class="prog-cont"><div class="prog p-java-width"></div></div>
+          </div>
+          <div class="skill-tile">
+            <img src="assets\js.png" alt="Profile Picture" />
+            <div class="prog-cont"><div class="prog p-js-width"></div></div>
+          </div>
+          <div class="skill-tile">
+            <img src="assets\python.png" alt="Profile Picture" />
+            <div class="prog-cont"><div class="prog p-python-width"></div></div>
+          </div>
+          <div class="skill-tile">
+            <img src="assets\html.png" alt="Profile Picture" />
+            <div class="prog-cont"><div class="prog p-html-width"></div></div>
+          </div>
+        </div>
+      </section>
+      <section id="projects" class="projects o-section">
+        <h2 class="section-title">Projects</h2>
+        <div class="title-underline"></div>
+        <div class="project-container">
+          <div class="project-tile">
+            <img src="assets\square.png" alt="Project 1" />
+            <div class="project-info">
+              <h3>CIS UnixCloud</h3>
+              <p>A brief description of Project 1. This project involves...</p>
+              <a href="#" class="project-link">View Project</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="contact" class="contact o-section">
+        <h2 class="section-title">Connect with Me</h2>
+        <div class="title-underline"></div>
+
+        <div class="contact-container">
+          <p>
+            Feel free to reach out for collaboration, projects, or just to say
+            hi 👋
+          </p>
+
+          <!-- Social Links -->
+
+          <!-- Contact Form -->
+          <form class="contact-form">
+            <div class="form-group">
+              <input type="text" placeholder="Your Name" required />
+            </div>
+            <div class="form-group">
+              <input type="email" placeholder="Your Email" required />
+            </div>
+            <div class="form-group">
+              <textarea placeholder="Your Message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="form-btn">Send Message</button>
+          </form>
+          <div class="contact-links">
+            <a href="mailto:w.sahanlochana@gmail.com" class="contact-link">
+              <i class="fas fa-envelope"></i>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/SahanLochana"
+              target="_blank"
+              class="contact-link"
+            >
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a
+              href="https://github.com/SahanLochana"
+              target="_blank"
+              class="contact-link"
+            >
+              <i class="fab fa-github"></i>
+            </a>
+            <a
+              href="https://www.instagram.com/sahan_lochana_ii"
+              target="_blank"
+              class="contact-link"
+            >
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <!-- scripts -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <script>
+      const typed = new Typed(".auto-type", {
+        strings: [
+          "Web Developer.",
+          "Mobile App Developer.",
+          "Backend Developer.",
+        ],
+        typeSpeed: 50,
+        backSpeed: 25,
+        backDelay: 1000,
+        loop: true,
+      });
+
+      // Small JS to add .show when section is in viewport
+      const sections = document.querySelectorAll("section");
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+          }
+        });
+      });
+
+      sections.forEach((sec) => observer.observe(sec));
+    </script>
+  </body>
+</html>
