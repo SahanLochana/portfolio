@@ -35,6 +35,12 @@ header nav ul {
   gap: 20px;
 }
 
+.logo h1 a {
+  color: #006d3b;
+  font-size: 24px;
+  font-weight: 700;
+}
+
 header nav ul li a {
   color: black;
   font-weight: 500;

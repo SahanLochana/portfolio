@@ -14,14 +14,14 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
-
     <title>I'm Sahan</title>
   </head>
   <body>
+    <!-- Header -->
     <header>
       <nav>
         <div class="logo">
-          <h1>Sahan Lochana</h1>
+          <h1><a href="#">Sahan Lochana</a></h1>
         </div>
         <ul class="nav-links">
           <li><a href="#about">About</a></li>
@@ -31,7 +31,10 @@
         </ul>
       </nav>
     </header>
+
+    <!-- Main Content -->
     <section class="main">
+      <!-- Intro -->
       <section class="intro">
         <div class="intro-text">
           <h2 class="greeting">Hi,</h2>
@@ -39,13 +42,15 @@
           <p class="intro-content"><span class="auto-type"></span></p>
           <div class="btns">
             <a href="#projects" class="work-btn btn">View My Work</a>
-            <a href="#contact" class="touch-btn btn">Get in touch</a>
+            <a href="#contact" class="touch-btn btn">Get in Touch</a>
           </div>
         </div>
         <div class="intro-image">
-          <img src="assets\green.png" alt="Profile Picture" />
+          <img src="assets/green.png" alt="Profile Picture" />
         </div>
       </section>
+
+      <!-- About -->
       <section id="about" class="about-me o-section">
         <h2 class="section-title">About Me</h2>
         <div class="title-underline"></div>
@@ -64,36 +69,39 @@
           I always strive to deliver high-quality work with professionalism and
           creativity.
         </p>
-        .
       </section>
+
+      <!-- Skills -->
       <section id="skills" class="skills o-section">
         <h2 class="section-title">Skills</h2>
         <div class="title-underline"></div>
         <div class="skill-container">
           <div class="skill-tile">
-            <img src="assets\java.png" alt="Profile Picture" />
+            <img src="assets/java.png" alt="Java" />
             <div class="prog-cont"><div class="prog p-java-width"></div></div>
           </div>
           <div class="skill-tile">
-            <img src="assets\js.png" alt="Profile Picture" />
+            <img src="assets/js.png" alt="JavaScript" />
             <div class="prog-cont"><div class="prog p-js-width"></div></div>
           </div>
           <div class="skill-tile">
-            <img src="assets\python.png" alt="Profile Picture" />
+            <img src="assets/python.png" alt="Python" />
             <div class="prog-cont"><div class="prog p-python-width"></div></div>
           </div>
           <div class="skill-tile">
-            <img src="assets\html.png" alt="Profile Picture" />
+            <img src="assets/html.png" alt="HTML" />
             <div class="prog-cont"><div class="prog p-html-width"></div></div>
           </div>
         </div>
       </section>
+
+      <!-- Projects -->
       <section id="projects" class="projects o-section">
         <h2 class="section-title">Projects</h2>
         <div class="title-underline"></div>
         <div class="project-container">
           <div class="project-tile">
-            <img src="assets\square.png" alt="Project 1" />
+            <img src="assets/square.png" alt="CIS UnixCloud" />
             <div class="project-info">
               <h3>CIS UnixCloud</h3>
               <p>A brief description of Project 1. This project involves...</p>
@@ -102,6 +110,8 @@
           </div>
         </div>
       </section>
+
+      <!-- Contact -->
       <section id="contact" class="contact o-section">
         <h2 class="section-title">Connect with Me</h2>
         <div class="title-underline"></div>
@@ -112,8 +122,6 @@
             hi 👋
           </p>
 
-          <!-- Social Links -->
-
           <!-- Contact Form -->
           <form class="contact-form">
             <div class="form-group">
@@ -123,10 +131,16 @@
               <input type="email" placeholder="Your Email" required />
             </div>
             <div class="form-group">
-              <textarea placeholder="Your Message" rows="5" required></textarea>
+              <textarea
+                placeholder="Your Message"
+                rows="5"
+                required
+              ></textarea>
             </div>
             <button type="submit" class="form-btn">Send Message</button>
           </form>
+
+          <!-- Social Links -->
           <div class="contact-links">
             <a href="mailto:w.sahanlochana@gmail.com" class="contact-link">
               <i class="fas fa-envelope"></i>
@@ -157,34 +171,8 @@
       </section>
     </section>
 
-    <!-- scripts -->
+    <!-- Scripts -->
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-
-    <script>
-      const typed = new Typed(".auto-type", {
-        strings: [
-          "Web Developer.",
-          "Mobile App Developer.",
-          "Backend Developer.",
-        ],
-        typeSpeed: 50,
-        backSpeed: 25,
-        backDelay: 1000,
-        loop: true,
-      });
-
-      // Small JS to add .show when section is in viewport
-      const sections = document.querySelectorAll("section");
-
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("show");
-          }
-        });
-      });
-
-      sections.forEach((sec) => observer.observe(sec));
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>
