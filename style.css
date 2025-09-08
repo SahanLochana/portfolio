@@ -465,3 +465,41 @@ section.show {
   background: #004d2a;
   transform: translateY(-2px);
 }
+
+/* Footer */
+.footer {
+  background: #006d3b;
+  color: #fff;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.footer-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+.footer-container p {
+  font-size: 16px;
+  margin: 0;
+}
+
+.footer-links {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-links a {
+  color: #fff;
+  font-size: 20px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #e6f4ee;
+  transform: translateY(-3px);
+}
