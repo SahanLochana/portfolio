@@ -416,6 +416,7 @@ section.show {
 .contact-form {
   max-width: 600px;
   margin: 0 auto;
+  margin-bottom: 20px;
   background: #fff;
   padding: 30px 25px;
   border-radius: 12px;
