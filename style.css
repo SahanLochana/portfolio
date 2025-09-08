@@ -22,12 +22,15 @@ header {
   top: 0;
   background-color: white;
   z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 header nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 header nav ul {
@@ -45,6 +48,25 @@ header nav ul li a {
   color: black;
   font-weight: 500;
   font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+  color: #006d3b;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: #006d3b;
+  margin: 3px 0;
+  transition: 0.3s;
 }
 
 /* all section */
@@ -66,7 +88,7 @@ section.show {
   width: 100px;
   height: 4px;
   background-color: #006d3b;
-  margin-bottom: 20px; /* Center the underline */
+  margin: 0 auto 20px auto;
   border-radius: 2px;
 }
 
@@ -78,6 +100,8 @@ section.show {
   padding: 20px 50px;
   height: 95vh;
   gap: 110px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .intro-text h2 {
@@ -107,13 +131,15 @@ section.show {
 }
 
 .btn {
-  padding: 10px;
+  padding: 12px 24px;
   border-radius: 5px;
-  transition: transform 0.2s ease-in-out; /* smooth scaling */
+  transition: transform 0.2s ease-in-out;
+  font-weight: 500;
+  display: inline-block;
 }
 
 .btn:hover {
-  transform: scale(1.1); /* scale up by 10% */
+  transform: scale(1.05);
 }
 
 .work-btn {
@@ -125,11 +151,14 @@ section.show {
 .touch-btn {
   border: 2px solid #006d3b;
   color: #006d3b;
+  background: transparent;
 }
 
 .intro-image img {
-  width: 400px;
-  height: 400px;
+  width: 100%;
+  height: auto;
+  max-width: 400px;
+  max-height: 400px;
 }
 
 .intro-image {
@@ -144,7 +173,7 @@ section.show {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 60px 50px;
+  padding: 60px 20px;
   min-height: 100vh;
   background: linear-gradient(135deg, #f9f9f9, #e6f4ee);
   position: relative;
@@ -160,6 +189,7 @@ section.show {
   text-transform: uppercase;
   letter-spacing: 2px;
   position: relative;
+  text-align: center;
 }
 
 /* Animated underline */
@@ -225,8 +255,10 @@ section.show {
   justify-content: center;
   align-items: center;
   gap: 40px;
-  flex-wrap: wrap; /* makes it responsive */
+  flex-wrap: wrap;
   padding: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .skill-tile {
@@ -248,6 +280,7 @@ section.show {
   width: 80px;
   height: 80px;
   margin-bottom: 12px;
+  object-fit: contain;
 }
 
 /* Progress Container */
@@ -296,14 +329,9 @@ section.show {
   justify-content: center;
   align-items: center;
   gap: 50px;
-}
-
-/* Container */
-.project-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 /* Tile */
@@ -351,7 +379,7 @@ section.show {
 .project-link {
   display: inline-block;
   padding: 10px 20px;
-  background: #006d3b;   /* main color */
+  background: #006d3b;
   color: #fff;
   border-radius: 8px;
   text-decoration: none;
@@ -360,7 +388,7 @@ section.show {
 }
 
 .project-link:hover {
-  background: #004d2a;   /* darker shade for hover */
+  background: #004d2a;
 }
 
 /* Contact Section */
@@ -385,6 +413,11 @@ section.show {
   border-radius: 2px;
 }
 
+.contact-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
 .contact-container p {
   font-size: 18px;
   color: #444;
@@ -397,6 +430,7 @@ section.show {
   justify-content: center;
   gap: 25px;
   margin-bottom: 40px;
+  flex-wrap: wrap;
 }
 
 .contact-link {
@@ -459,6 +493,8 @@ section.show {
   border-radius: 8px;
   cursor: pointer;
   transition: background 0.3s ease, transform 0.2s ease;
+  width: 100%;
+  max-width: 200px;
 }
 
 .form-btn:hover {
@@ -502,4 +538,162 @@ section.show {
 .footer-links a:hover {
   color: #e6f4ee;
   transform: translateY(-3px);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .intro {
+    gap: 60px;
+  }
+  
+  .intro-text h2, .intro-content {
+    font-size: 36px;
+  }
+  
+  .intro-text {
+    min-width: auto;
+  }
+}
+
+@media (max-width: 900px) {
+  .intro {
+    flex-direction: column;
+    text-align: center;
+    height: auto;
+    padding: 80px 20px;
+  }
+  
+  .intro-text h2 {
+    min-width: auto;
+  }
+  
+  .btns {
+    justify-content: center;
+  }
+  
+  .intro-image {
+    margin-top: 40px;
+    width: 300px;
+    height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    position: fixed;
+    top: 70px;
+    right: -100%;
+    background-color: white;
+    width: 100%;
+    height: calc(100vh - 70px);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    transition: right 0.3s ease;
+    box-shadow: -5px 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .nav-links.active {
+    right: 0;
+  }
+  
+  .hamburger {
+    display: flex;
+  }
+  
+  .hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+  }
+  
+  .intro-text h2, .intro-content {
+    font-size: 32px;
+  }
+  
+  .section-title {
+    font-size: 36px;
+  }
+  
+  .about-me p {
+    font-size: 16px;
+  }
+  
+  .skill-container {
+    gap: 20px;
+  }
+  
+  .skill-tile {
+    width: 110px;
+    padding: 20px;
+  }
+  
+  .skill-tile img {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .contact-links {
+    gap: 15px;
+  }
+  
+  .contact-link {
+    width: 45px;
+    height: 45px;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .intro-text h2, .intro-content {
+    font-size: 28px;
+  }
+  
+  .btns {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .intro-image {
+    width: 250px;
+    height: 250px;
+  }
+  
+  .section-title {
+    font-size: 32px;
+  }
+  
+  .skill-container {
+    padding: 15px;
+  }
+  
+  .skill-tile {
+    width: calc(50% - 20px);
+    max-width: 130px;
+  }
+  
+  .project-tile {
+    max-width: 100%;
+  }
+  
+  .contact-form {
+    padding: 20px 15px;
+  }
+  
+  .footer-container {
+    flex-direction: column;
+    gap: 10px;
+  }
 }

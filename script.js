@@ -16,12 +16,25 @@ const observer = new IntersectionObserver((entries) => {
       entry.target.classList.add("show");
     }
   });
+}, {
+  threshold: 0.1
 });
 
 sections.forEach((sec) => observer.observe(sec));
 
-// Optional: Contact form handler (prevent default for now)
-document.querySelector(".contact-form").addEventListener("submit", (e) => {
-  e.preventDefault();
-  alert("Thanks for reaching out! 🚀 I'll get back to you soon.");
+// Mobile menu toggle
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
+
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('active');
+  navLinks.classList.toggle('active');
+});
+
+// Close mobile menu when clicking on a link
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', () => {
+    hamburger.classList.remove('active');
+    navLinks.classList.remove('active');
+  });
 });
